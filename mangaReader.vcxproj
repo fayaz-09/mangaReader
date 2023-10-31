@@ -72,12 +72,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\fayaz\Documents\FayazImportantWork\mangaReader\mangaReader\dependancies\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\fayaz\Documents\FayazImportantWork\mangaReader\mangaReader\dependancies\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\fayaz\Documents\FayazImportantWork\mangaReader\mangaReader\dependancies\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\fayaz\Documents\FayazImportantWork\mangaReader\mangaReader\dependancies\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -88,10 +92,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>dependancies\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -116,10 +122,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>dependancies\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -139,7 +147,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\IMAT3907\Assessment\Application_Clean\src\glad.c" />
+    <ClCompile Include="dependancies\imgui\imgui.cpp" />
+    <ClCompile Include="dependancies\imgui\imgui_demo.cpp" />
+    <ClCompile Include="dependancies\imgui\imgui_draw.cpp" />
+    <ClCompile Include="dependancies\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="dependancies\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="dependancies\imgui\imgui_tables.cpp" />
+    <ClCompile Include="dependancies\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\mangaReader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dependancies\imgui\imconfig.h" />
+    <ClInclude Include="dependancies\imgui\imgui.h" />
+    <ClInclude Include="dependancies\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="dependancies\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="dependancies\imgui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="dependancies\imgui\imgui_internal.h" />
+    <ClInclude Include="dependancies\imgui\imstb_rectpack.h" />
+    <ClInclude Include="dependancies\imgui\imstb_textedit.h" />
+    <ClInclude Include="dependancies\imgui\imstb_truetype.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
