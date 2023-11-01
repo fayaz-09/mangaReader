@@ -48,6 +48,9 @@
     <ClCompile Include="dependancies\imgui\imgui.cpp">
       <Filter>Source Files\imgui</Filter>
     </ClCompile>
+    <ClCompile Include="src\stb_Image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dependancies\imgui\imgui_impl_opengl3_loader.h">
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="dependancies\imgui\imgui_impl_opengl3.h">
       <Filter>Header Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stb_Image.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
